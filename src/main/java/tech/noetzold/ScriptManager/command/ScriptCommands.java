@@ -2,6 +2,7 @@ package tech.noetzold.ScriptManager.command;
 
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellOption;
 
 @ShellComponent
 public class ScriptCommands {
@@ -12,7 +13,7 @@ public class ScriptCommands {
     }
 
     @ShellMethod(key = "add_new", value="Add new script")
-    public void addNew(){
+    public void addNew(@ShellOption String lang, @ShellOption String pathSource){
 
     }
 
