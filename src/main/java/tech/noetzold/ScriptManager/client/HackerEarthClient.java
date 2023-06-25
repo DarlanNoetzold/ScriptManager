@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import tech.noetzold.ScriptManager.model.CompileRequest;
 
-@FeignClient(name = "hackerEarthClient", url = "https://api.hackerearth.com/v3/code/compile/")
+@FeignClient(name = "hackerEarthClient", url = "https://api.hackerearth.com/v4/partner/code-evaluation/submissions/")
 public interface HackerEarthClient {
 
     @PostMapping
-    String compileCode(@RequestHeader("Authorization") String apiKey, @RequestBody CompileRequest compileRequest);
+    String compileCode(@RequestHeader("client-secret") String apiKey, @RequestBody CompileRequest compileRequest);
 }
