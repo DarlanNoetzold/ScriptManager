@@ -1,9 +1,11 @@
 package tech.noetzold.ScriptManager.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import tech.noetzold.ScriptManager.client.HackerEarthClient;
 import tech.noetzold.ScriptManager.model.CompileRequest;
 
+@Service
 public class CodeCompilationService {
     private final HackerEarthClient hackerEarthClient;
 
