@@ -19,7 +19,7 @@ public class CodeCompilationService {
         compileRequest.setSource(code);
         compileRequest.setLang("java");
 
-        String apiKey = "API_KEY_AQUI";
+        String apiKey = "cdd1b13d25456b4c72a2ef03c5b2e8643527f5a9";
 
         return hackerEarthClient.compileCode(apiKey, compileRequest);
     }
