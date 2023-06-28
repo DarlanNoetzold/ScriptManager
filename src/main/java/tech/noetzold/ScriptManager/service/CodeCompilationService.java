@@ -14,10 +14,10 @@ public class CodeCompilationService {
         this.hackerEarthClient = hackerEarthClient;
     }
 
-    public String compileCode(String code) {
+    public String compileCode(String lang, String code) {
         CompileRequest compileRequest = new CompileRequest();
         compileRequest.setSource(code);
-        compileRequest.setLang("java");
+        compileRequest.setLang(lang);
 
         String apiKey = "cdd1b13d25456b4c72a2ef03c5b2e8643527f5a9";
 
