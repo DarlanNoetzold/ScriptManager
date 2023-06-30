@@ -20,14 +20,6 @@ public class CodeCompilationService {
         this.hackerEarthClient = hackerEarthClient;
     }
 
-    public CompileRequest addNewScript(String lang, String code){
-        CompileRequest compileRequest = new CompileRequest();
-        compileRequest.setSource(code);
-        compileRequest.setLang(lang);
-
-        return compileRepository.save(compileRequest);
-    }
-
     public String compileCode(Long id) {
         CompileRequest compileRequest = compileRepository.findById(id).orElse(null);
 
