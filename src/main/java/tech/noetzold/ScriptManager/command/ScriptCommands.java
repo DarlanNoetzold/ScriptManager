@@ -4,14 +4,16 @@ import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 import tech.noetzold.ScriptManager.service.CodeCompilationService;
+import tech.noetzold.ScriptManager.service.CompileRequestService;
 
 @ShellComponent
 public class ScriptCommands {
 
     private final CodeCompilationService codeCompilationService;
-
-    public ScriptCommands(CodeCompilationService codeCompilationService) {
+    private final CompileRequestService compileRequestService;
+    public ScriptCommands(CodeCompilationService codeCompilationService, CompileRequestService compileRequestService) {
         this.codeCompilationService = codeCompilationService;
+        this.compileRequestService = compileRequestService;
     }
 
     @ShellMethod(key = "show_all", value = "List the scripts")
@@ -21,7 +23,7 @@ public class ScriptCommands {
 
     @ShellMethod(key = "add_new", value="Add new script")
     public void addNew(@ShellOption String lang, @ShellOption String pathSource){
-        System.out.println(codeCompilationService.addNewScript(lang, pathSource).toString());
+        System.out.println(compileRequestService.addNewScript(lang, pathSource).toString());
     }
 
     @ShellMethod(key = "compile", value = "Compile a script")
