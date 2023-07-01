@@ -21,7 +21,7 @@ public class CodeCompilationService {
     }
 
     public String compileCode(Long id) {
-        CompileRequest compileRequest = compileRepository.findById(id).orElse(null);
+        CompileRequest compileRequest = compileRepository.findById(id).get();
 
         if(compileRequest == null)
             return "There are no script with id " + id;
