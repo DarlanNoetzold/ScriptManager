@@ -10,15 +10,11 @@ import java.util.List;
 
 @Service
 public class CodeCompilationService {
-    private final HackerEarthClient hackerEarthClient;
-
     @Autowired
     private CompileRepository compileRepository;
 
     @Autowired
-    public CodeCompilationService(HackerEarthClient hackerEarthClient) {
-        this.hackerEarthClient = hackerEarthClient;
-    }
+    HackerEarthClient hackerEarthClient;
 
     public String compileCode(Long id) {
         CompileRequest compileRequest = compileRepository.findById(id).get();
