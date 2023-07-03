@@ -34,6 +34,6 @@ public class ScriptCommands {
     }
     @ShellMethod(key = "result", value = "See the compile result")
     public void seeResult(){
-        
+
     }
 }
