@@ -17,7 +17,7 @@ public class CodeCompilationService {
     HackerEarthClient hackerEarthClient;
 
     public String compileCode(Long id) {
-        CompileRequest compileRequest = compileRepository.findById(id).get();
+        CompileRequest compileRequest = compileRepository.findById(id).orElse(null);
 
         if(compileRequest == null)
             return "There are no script with id " + id;
