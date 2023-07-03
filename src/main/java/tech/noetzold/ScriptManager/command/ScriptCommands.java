@@ -18,7 +18,9 @@ public class ScriptCommands {
 
     @ShellMethod(key = "show_all", value = "List the scripts")
     public void showAll(){
-        System.out.println();
+        compileRequestService.getAllScripts().stream()
+                .map(Object::toString)
+                .forEach(System.out::println);
     }
 
     @ShellMethod(key = "add_new", value="Add new script")
@@ -32,6 +34,6 @@ public class ScriptCommands {
     }
     @ShellMethod(key = "result", value = "See the compile result")
     public void seeResult(){
-
+        
     }
 }
