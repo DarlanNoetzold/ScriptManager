@@ -30,4 +30,8 @@ public class CodeCompilationService {
     public List<CompileRequest> showScripts(){
         return compileRepository.findAll();
     }
+
+    public String seeResultCompilation(String id){
+        return hackerEarthClient.resultCompileCode("cdd1b13d25456b4c72a2ef03c5b2e8643527f5a9", id);
+    }
 }
