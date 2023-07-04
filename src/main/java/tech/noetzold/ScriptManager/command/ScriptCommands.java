@@ -32,8 +32,9 @@ public class ScriptCommands {
     public void compileScript(@ShellOption Long id){
         System.out.println(codeCompilationService.compileCode(id));
     }
-    @ShellMethod(key = "result", value = "See the compile result")
-    public void seeResult(){
 
+    @ShellMethod(key = "result", value = "See the compile result")
+    public void seeResult(@ShellOption String id){
+        codeCompilationService.seeResultCompilation(id);
     }
 }
