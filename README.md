@@ -15,6 +15,8 @@
 
 ## Como utilizar:
 
+![image](https://github.com/DarlanNoetzold/ScriptManager/assets/41628589/8b297bb7-e7a2-4589-8eb2-eb4f7ab5d714)
+
 
 ---
 
